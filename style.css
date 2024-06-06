@@ -46,6 +46,7 @@ body{
     width: fit-content;
     height: 300px;
     padding: 20px;
+    text-align: center;
     background-color: #dadada;
     flex-direction: column;
     justify-content: center;
@@ -255,35 +256,95 @@ body{
 
 /* Topics */
 
+/* Roadmaps */
+
+.roadmaps{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.roadmaps .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.roadmaps .title{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roadmaps .title h1{
+    color: var(--blue-);
+}
+
+.roadmaps .title::before{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(45deg, blue, #a782ee);
+    width: 40%;
+    height: 5px;
+    top: 50%;
+    left: 0;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.roadmaps .title::after{
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(45deg, blue, #a782ee);
+    width: 40%;
+    height: 5px;
+    top: 50%;
+    right: 0;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+/* Roadmaps */
+
 /* extra Small devices */
 @media (max-width: 499px){
     /* Message div */
     .msg .text{
-        font-size: 11px;
-        height: 250px;
+        font-size: 15px;
+        height: 280px;
     }
     /* Message div */
      /* Hello Message */
     .curve {
         background-color: var(--blue-);
-        height: 130px;
+        height: 200px;
     }
     .curve img {
-        top: 129px;
+        top: 199px;
     }
     .hello_msg{
         height: 240px;
         margin: 0px auto;
         transform: translateY(-40px);
+        justify-content: unset;
     }
     .hello_msg h1{
-        font-size: 30px;
+        font-size: 35px;
         flex-direction: column-reverse;
         display: flex;
         gap: 10px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        text-align: center;
     }
     .hello_msg span{
         font-size: 40px;
@@ -299,6 +360,7 @@ body{
     }
     .about .container .text h1{
         font-size: 40px;
+        text-align: center;
     }
     .about .container .service .service_div svg{
         font-size: 40px;
@@ -311,6 +373,9 @@ body{
     }
     /* About Blog */
     /* Topics */
+    .topics .container {
+        gap: 20px;
+    }
     .topics .title h1 {
         font-size: 26px;
     }
@@ -321,13 +386,24 @@ body{
         gap: 10px;
     }
     .topics .topic_divs .topic {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 140px;
     }
     .topics .topic_divs .topic h1 {
-        font-size: 12px;
+        font-size: 18px;
     }
     /* Topics */
+    /* Roadmaps */
+    .roadmaps .container {
+        gap: 20px;
+    }
+    .roadmaps .title h1 {
+        font-size: 26px;
+    }
+    .roadmaps .title::before, .roadmaps .title::after{
+        width: calc(36% - 16px);
+    }
+    /* Roadmaps */  
 }
 
 /* Small devices */
@@ -386,6 +462,20 @@ body{
         font-size: 26px;
     }
     /* Topics */
+    /* Roadmaps */
+    .roadmaps .title h1 {
+        font-size: 30px;
+    }
+    .roadmaps .title::before, .roadmaps .title::after{
+        width: 36%;
+    }
+    .roadmaps .topic_divs .topic {
+        width: 220px;
+    }
+    .roadmaps .topic_divs .topic h1 {
+        font-size: 26px;
+    }
+    /* Roadmaps */
 }
 
 /* Medium devices */
@@ -400,6 +490,11 @@ body{
         font-size: 30px;
     }
     /* Topics */
+    /* Roadmaps */
+    .roadmaps .title h1 {
+        font-size: 30px;
+    }
+    /* Roadmaps */
 }
 
 /* Large devices */
