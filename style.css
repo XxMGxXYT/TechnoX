@@ -14,19 +14,6 @@ body{
     height: 4000px;
 }
 
-.curve{
-    position: relative;
-    z-index: -10;
-    width: 100%;
-}
-
-.curve img{
-    transform: rotate(180deg);
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
 /* Message div */
 .msg{
     position: fixed;
@@ -58,13 +45,158 @@ body{
 }
 /* Message div */
 
-/* Hello Message */
+/* Back button */
 
-.hello_msg{
+.fly_button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(45deg);
+    background-color: #ffea1b;
+    position: fixed;
+    bottom: 10px;
+    right: -60px;
+    outline: 2px solid black;
+    animation: light_animation 2s infinite 0.3s linear;
+    transition: 0.2s;
+}
+
+.fly_button .but_icon{
     width: 100%;
-    height: 300px;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.fly_button svg{
+    transform: rotate(-45deg);
+    font-size: 30px;
+    color: #000;
+}
+
+@keyframes light_animation {
+    0%{
+        box-shadow: 0 0 6px 5px #d1d1d1;
+    }
+    50%{
+        box-shadow: 0 0 6px 5px #777777;
+    }
+    100%{
+        box-shadow: 0 0 6px 5px #d1d1d1;
+    }
+}
+
+/* Back button */
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--blue-);
+    z-index: 10;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+#list_button{
+    display: none;
+    cursor: pointer;
+    transition: 0.5s transform;
+}
+
+header img{
+    width: 64px;
+    height: 60px;
+}
+
+header .logo{
+    width: 20%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logo h3{
+    color: black;
+}
+
+header ul{
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    transition: 0.3s opacity;
+}
+
+header ul li{
+    width: calc((100% / 4) - 40px);
+    height: 100%;
+}
+
+header ul a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header ul li span{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+#list{
+    display: none;
+}
+
+/* Header */
+
+/* Hello Message */
+
+.curve{
+    position: relative;
+    z-index: -10;
+    width: 100%;
+    height: 210px;
+    background-color: var(--blue-);
+}
+
+.curve img{
+    transform: rotate(180deg);
+    position: absolute;
+    left: 0;
+    top: 209px;
+}
+
+.hello_msg{
+    padding-top: 70px;
+    width: 100%;
+    height: 340px;
+    display: flex;
     align-items: center;
     gap: 20px;
     flex-direction: column;
@@ -90,7 +222,7 @@ body{
 
 .about{
     width: 100%;
-    margin-top: 10%
+    margin-top: 20%
 }
 
 .about .container{
@@ -354,6 +486,58 @@ body{
         text-align: center;
     }
     /* Hello Message */
+    /* Header */
+    header .container{
+        align-items: center;
+        padding-left: 30px;
+    }
+    #list_button{
+        display: unset;
+    }
+    header ul{
+        display: none;
+    }
+    #list {
+        padding: 1px;
+        position: absolute;
+        background-color: rgb(72 179 251);
+        width: 100%;
+        left: 0;
+        top: -280px;
+        flex-direction: column;
+        height: 330px;
+        gap: 5px;
+        justify-content: flex-start;
+        align-items: start;
+        z-index: 1;
+        list-style: none;
+        transition: 0.5s;
+        transition-property: transform;
+    }
+    #list li {
+        width: 100%;
+        outline: 1px solid black;
+        height: 100%;
+    }
+    #list a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    #list li img{
+        width: 40px;
+        height: 40px;
+    }
+    #list li a span{
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+    /* Header */
     /* About Blog */
     .about .container .service .service_div{
         width: 260px;
@@ -411,13 +595,12 @@ body{
     /* Hello Message */
     .curve {
         background-color: var(--blue-);
-        height: 130px;
+        height: 250px;
     }
     .curve img {
-        top: 129px;
+        top: 248px;
     }
     .hello_msg{
-        height: 240px;
         margin: 0px auto;
         transform: translateY(-40px);
     }
@@ -431,6 +614,57 @@ body{
         font-size: 25px;
     }
     /* Hello Message */
+    /* Header */
+    header .container{
+        align-items: center;
+    }
+    #list_button{
+        display: unset;
+    }
+    header ul{
+        display: none;
+    }
+    #list{
+        padding: 1px;
+        position: absolute;
+        background-color: rgb(72 179 251);
+        width: 100%;
+        left: 0;
+        top: -280px;
+        flex-direction: column;
+        height: 380px;
+        gap: 5px;
+        justify-content: flex-start;
+        align-items: start;
+        z-index: 1;
+        list-style: none;
+        transition: 0.5s;
+        transition-property: transform;
+    }
+    #list li {
+        width: 100%;
+        outline: 1px solid black;
+        height: 100%;
+    }
+    #list a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    #list li img{
+        width: 40px;
+        height: 40px;
+    }
+    #list li a span{
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+    /* Header */
     /* About Blog */
     .about .container .service .service_div{
         width: 55%;
