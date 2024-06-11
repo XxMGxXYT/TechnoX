@@ -5,13 +5,20 @@ let back = document.getElementById("back_but")
 // Get the header list and the list button
 let list = document.getElementById("list")
 let listBut = document.getElementById("list_button")
+// Get "a" elements for topics section
+let topSec = document.querySelectorAll(".topicsSection")
 
-
+// Go to topics section when click on "a" of topics on header
+topSec.forEach((e) => {
+    e.addEventListener("click", () => {
+        window.scrollTo(0, document.querySelector(".topics").offsetTop - 60)
+    })
+})
 
 // Scroll functions
 window.onscroll = function(){
      // Fly button
-    if(window.scrollY >= 696){
+    if(window.scrollY >= 596){
         back.style.right = "10px"
     } else{
         back.style.right = "-60px"

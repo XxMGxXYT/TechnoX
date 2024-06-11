@@ -56,7 +56,7 @@ body{
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     transform: rotate(45deg);
-    background-color: #39ff1b;
+    background-color: var(--blue-);
     position: fixed;
     bottom: 10px;
     right: -60px;
@@ -201,6 +201,7 @@ header ul li span{
 
 .hello_msg h1{
     font-size: 50px;
+    color: black;
 }
 
 .hello_msg span{
@@ -210,7 +211,7 @@ header ul li span{
 
 .hello_msg h2{
     font-size: 30px;
-    color: rgb(0, 145, 0);
+    color: black;
 }
 
 /* Hello Message */
