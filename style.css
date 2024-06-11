@@ -1,8 +1,8 @@
-:root{
+:root {
     --blue-: rgb(0 153 255);
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,12 +10,12 @@
     -moz-box-sizing: border-box;
 }
 
-body{
+body {
     height: 4000px;
 }
 
 /* Message div */
-.msg{
+.msg {
     position: fixed;
     z-index: 11;
     width: 100%;
@@ -29,7 +29,7 @@ body{
     transition: 0.3s;
 }
 
-.msg .text{
+.msg .text {
     width: fit-content;
     height: 300px;
     padding: 20px;
@@ -43,11 +43,12 @@ body{
     font-size: 20px;
     box-shadow: inset 0 0 3px 2px white;
 }
+
 /* Message div */
 
 /* Back button */
 
-.fly_button{
+.fly_button {
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -65,7 +66,7 @@ body{
     transition: 0.2s;
 }
 
-.fly_button .but_icon{
+.fly_button .but_icon {
     width: 100%;
     height: 100%;
     display: flex;
@@ -73,20 +74,22 @@ body{
     align-items: center;
 }
 
-.fly_button svg{
+.fly_button svg {
     transform: rotate(-45deg);
     font-size: 30px;
     color: #000;
 }
 
 @keyframes light_animation {
-    0%{
+    0% {
         box-shadow: 0 0 6px 5px #d1d1d1;
     }
-    50%{
+
+    50% {
         box-shadow: 0 0 6px 5px #777777;
     }
-    100%{
+
+    100% {
         box-shadow: 0 0 6px 5px #d1d1d1;
     }
 }
@@ -95,7 +98,7 @@ body{
 
 /* Header */
 
-header{
+header {
     width: 100%;
     height: 100px;
     top: 0;
@@ -105,25 +108,25 @@ header{
     z-index: 10;
 }
 
-header .container{
+header .container {
     display: flex;
     justify-content: space-between;
     height: 100%;
 
 }
 
-#list_button{
+#list_button {
     display: none;
     cursor: pointer;
     transition: 0.5s transform;
 }
 
-header img{
+header img {
     width: 64px;
     height: 60px;
 }
 
-header .logo{
+header .logo {
     width: 20%;
     height: 100px;
     display: flex;
@@ -133,11 +136,11 @@ header .logo{
     cursor: pointer;
 }
 
-header .logo h3{
+header .logo h3 {
     color: black;
 }
 
-header ul{
+header ul {
     width: 70%;
     height: 100px;
     display: flex;
@@ -148,12 +151,12 @@ header ul{
     transition: 0.3s opacity;
 }
 
-header ul li{
+header ul li {
     width: calc((100% / 4) - 40px);
     height: 100%;
 }
 
-header ul a{
+header ul a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -164,7 +167,7 @@ header ul a{
     text-decoration: none;
 }
 
-header ul li span{
+header ul li span {
     text-align: center;
     color: black;
     font-weight: bold;
@@ -174,7 +177,7 @@ header ul li span{
 
 /* Hello Message */
 
-.curve{
+.curve {
     position: relative;
     z-index: -10;
     width: 100%;
@@ -182,14 +185,14 @@ header ul li span{
     background-color: var(--blue-);
 }
 
-.curve img{
+.curve img {
     transform: rotate(180deg);
     position: absolute;
     left: 0;
     top: 209px;
 }
 
-.hello_msg{
+.hello_msg {
     padding-top: 70px;
     width: 100%;
     height: 340px;
@@ -199,17 +202,17 @@ header ul li span{
     flex-direction: column;
 }
 
-.hello_msg h1{
+.hello_msg h1 {
     font-size: 50px;
     color: black;
 }
 
-.hello_msg span{
+.hello_msg span {
     font-size: 60px;
     color: rgb(20, 0, 202);
 }
 
-.hello_msg h2{
+.hello_msg h2 {
     font-size: 30px;
     color: black;
 }
@@ -218,12 +221,12 @@ header ul li span{
 
 /* About Blog */
 
-.about{
+.about {
     width: 100%;
     margin-top: 20%
 }
 
-.about .container{
+.about .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +234,7 @@ header ul li span{
     flex-direction: column;
 }
 
-.about .container .text{
+.about .container .text {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -240,12 +243,12 @@ header ul li span{
     flex-direction: column;
 }
 
-.about .container .text h1{
+.about .container .text h1 {
     font-size: 50px;
     color: var(--blue-);
 }
 
-.about .container .text span{
+.about .container .text span {
     width: 100%;
     height: 10px;
     border-radius: 20px;
@@ -253,7 +256,7 @@ header ul li span{
     border: 2px solid black;
 }
 
-.about .container .service{
+.about .container .service {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
@@ -263,7 +266,7 @@ header ul li span{
     width: 100%;
 }
 
-.about .container .service .service_div{
+.about .container .service .service_div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,13 +282,13 @@ header ul li span{
     outline: 1px solid black;
 }
 
-.about .container .service .service_div h2{
+.about .container .service .service_div h2 {
     font-size: 22px;
     color: rgb(51, 255, 0);
     font-weight: bold;
 }
 
-.about .container .service .service_div svg{
+.about .container .service .service_div svg {
     color: white;
     font-size: 40px;
 }
@@ -294,7 +297,7 @@ header ul li span{
 
 /* Topics */
 
-.topics{
+.topics {
     margin-top: 30%;
     width: 100%;
     display: flex;
@@ -303,7 +306,7 @@ header ul li span{
     gap: 20px;
 }
 
-.topics .container{
+.topics .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,7 +314,7 @@ header ul li span{
     gap: 60px;
 }
 
-.topics .title{
+.topics .title {
     position: relative;
     height: 50px;
     width: 100%;
@@ -320,11 +323,12 @@ header ul li span{
     align-items: center;
 }
 
-.topics .title h1{
+.topics .title h1 {
     color: var(--blue-);
+    text-align: center;
 }
 
-.topics .title::before{
+.topics .title::before {
     content: "";
     position: absolute;
     background-image: linear-gradient(45deg, blue, #a782ee);
@@ -336,7 +340,7 @@ header ul li span{
     border: 1px solid black;
 }
 
-.topics .title::after{
+.topics .title::after {
     content: "";
     position: absolute;
     background-image: linear-gradient(45deg, blue, #a782ee);
@@ -348,7 +352,7 @@ header ul li span{
     border: 1px solid black;
 }
 
-.topics .topic_divs{
+.topics .topic_divs {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -357,7 +361,7 @@ header ul li span{
     align-items: center;
 }
 
-.topics .topic_divs .topic{
+.topics .topic_divs .topic {
     position: relative;
     width: 290px;
     height: 200px;
@@ -366,18 +370,18 @@ header ul li span{
     align-items: center;
 }
 
-.topics .topic_divs a{
+.topics .topic_divs a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-.topics .topic_divs .topic img{
+.topics .topic_divs .topic img {
     width: 100%;
     height: 100%;
 }
 
-.topics .topic_divs .topic h1{
+.topics .topic_divs .topic h1 {
     position: absolute;
     font-size: 30px;
     font-weight: bold;
@@ -388,7 +392,7 @@ header ul li span{
 
 /* Roadmaps */
 
-.roadmaps{
+.roadmaps {
     margin-top: 30%;
     width: 100%;
     display: flex;
@@ -397,7 +401,7 @@ header ul li span{
     gap: 20px;
 }
 
-.roadmaps .container{
+.roadmaps .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -405,7 +409,7 @@ header ul li span{
     gap: 60px;
 }
 
-.roadmaps .title{
+.roadmaps .title {
     position: relative;
     height: 50px;
     width: 100%;
@@ -414,11 +418,11 @@ header ul li span{
     align-items: center;
 }
 
-.roadmaps .title h1{
+.roadmaps .title h1 {
     color: var(--blue-);
 }
 
-.roadmaps .title::before{
+.roadmaps .title::before {
     content: "";
     position: absolute;
     background-image: linear-gradient(45deg, blue, #a782ee);
@@ -430,7 +434,7 @@ header ul li span{
     border: 1px solid black;
 }
 
-.roadmaps .title::after{
+.roadmaps .title::after {
     content: "";
     position: absolute;
     background-image: linear-gradient(45deg, blue, #a782ee);
@@ -442,7 +446,7 @@ header ul li span{
     border: 1px solid black;
 }
 
-.roadmaps .roadmap_divs{
+.roadmaps .roadmap_divs {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -451,7 +455,7 @@ header ul li span{
     align-items: center;
 }
 
-.roadmaps .roadmap_divs .roadmap{
+.roadmaps .roadmap_divs .roadmap {
     position: relative;
     width: 290px;
     height: 200px;
@@ -460,18 +464,18 @@ header ul li span{
     align-items: center;
 }
 
-.roadmaps .roadmap_divs a{
+.roadmaps .roadmap_divs a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-.roadmaps .roadmap_divs .roadmap img{
+.roadmaps .roadmap_divs .roadmap img {
     width: 100%;
     height: 100%;
 }
 
-.roadmaps .roadmap_divs .roadmap h1{
+.roadmaps .roadmap_divs .roadmap h1 {
     position: absolute;
     font-size: 30px;
     font-weight: bold;
@@ -482,30 +486,125 @@ header ul li span{
 }
 
 /* Roadmaps */
+/* Footer: Contact section */
+
+footer {
+    width: 100%;
+    margin-top: 20%;
+    background-color: darkblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 400px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+footer .container .contact_text h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+footer .container .contact_links {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+}
+
+footer .container .contact_links a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer .container .contact_links a:nth-child(1):hover {
+    color: #17A9FD;
+}
+
+footer .container .contact_links a:nth-child(2):hover {
+    color: #C13584;
+}
+
+footer .container .contact_links a:nth-child(3):hover {
+    color: blue;
+}
+
+footer .container .contact_links a:nth-child(4):hover {
+    color: #161312;
+}
+
+footer .container .contact_links a:nth-child(5):hover {
+    color: #000000;
+}
+
+footer .container .other_links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container .other_links .links {
+    width: 30%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: white;
+}
+
+footer .container .other_links .links svg {
+    font-size: 30px;
+}
+
+footer .container .other_links .links:nth-child(2) svg {
+    color: #09ff09;
+}
+
+footer .container .other_links .links:nth-child(1) svg {
+    color: gray;
+}
+
+footer .container .other_links .links span {
+    font-size: 20px;
+}
+
+/* Footer: Contact section */
 
 /* extra Small devices */
-@media (max-width: 499px){
+@media (max-width: 499px) {
+
     /* Message div */
-    .msg .text{
+    .msg .text {
         font-size: 15px;
         height: 280px;
     }
+
     /* Message div */
-     /* Hello Message */
+    /* Hello Message */
     .curve {
         background-color: var(--blue-);
         height: 270px;
     }
+
     .curve img {
         top: 269px;
     }
-    .hello_msg{
+
+    .hello_msg {
         height: 470px;
         margin: -50px auto;
         transform: translateY(-40px);
         justify-content: unset;
     }
-    .hello_msg h1{
+
+    .hello_msg h1 {
         font-size: 35px;
         flex-direction: column-reverse;
         display: flex;
@@ -515,25 +614,31 @@ header ul li span{
         flex-wrap: wrap;
         text-align: center;
     }
-    .hello_msg span{
+
+    .hello_msg span {
         font-size: 40px;
     }
-    .hello_msg h2{
+
+    .hello_msg h2 {
         font-size: 20px;
         text-align: center;
     }
+
     /* Hello Message */
     /* Header */
-    header .container{
+    header .container {
         align-items: center;
         padding-left: 30px;
     }
-    #list_button{
+
+    #list_button {
         display: unset;
     }
-    header ul{
+
+    header ul {
         display: none;
     }
+
     #list {
         display: none;
         padding: 1px;
@@ -552,11 +657,13 @@ header ul li span{
         transition: 0.5s;
         transition-property: transform;
     }
+
     #list li {
         width: 100%;
         outline: 1px solid black;
         height: 100%;
     }
+
     #list a {
         width: 100%;
         height: 100%;
@@ -567,122 +674,188 @@ header ul li span{
         cursor: pointer;
         text-decoration: none;
     }
-    #list li img{
+
+    #list li img {
         width: 40px;
         height: 40px;
     }
-    #list li a span{
+
+    #list li a span {
         text-align: center;
         color: black;
         font-weight: bold;
     }
+
     /* Header */
     /* About Blog */
     .about {
         margin-top: 40%;
     }
-    .about .container .service .service_div{
+
+    .about .container .service .service_div {
         width: 260px;
     }
-    .about .container .text h1{
+
+    .about .container .text h1 {
         font-size: 40px;
         text-align: center;
     }
-    .about .container .service .service_div svg{
+
+    .about .container .service .service_div svg {
         font-size: 40px;
     }
-    .about .container .service .service_div h2{
+
+    .about .container .service .service_div h2 {
         font-size: 17px;
     }
-    .about .container .service .service_div p{
+
+    .about .container .service .service_div p {
         font-size: 15px;
     }
+
     /* About Blog */
     /* Topics */
     .topics .container {
         gap: 20px;
     }
+
     .topics .title h1 {
         font-size: 26px;
     }
-    .topics .title::before, .topics .title::after{
+
+    .topics .title::before,
+    .topics .title::after {
         width: calc(36% - 16px);
     }
-    .topics .topic_divs{
+
+    .topics .topic_divs {
         gap: 10px;
     }
+
     .topics .topic_divs .topic {
         width: 150px;
         height: 140px;
     }
+
     .topics .topic_divs .topic h1 {
         font-size: 18px;
     }
+
     /* Topics */
     /* Roadmaps */
     .roadmaps .container {
         gap: 20px;
     }
+
     .roadmaps .title h1 {
         font-size: 26px;
     }
-    .roadmaps .title::before, .roadmaps .title::after{
+
+    .roadmaps .title::before,
+    .roadmaps .title::after {
         width: calc(36% - 16px);
     }
-    .roadmaps .roadmap_divs{
+
+    .roadmaps .roadmap_divs {
         gap: 10px;
     }
+
     .roadmaps .roadmap_divs .roadmap {
         width: 100%;
         height: 100%;
     }
+
     .roadmaps .roadmap_divs .roadmap h1 {
         font-size: 23px;
     }
+
     .roadmaps .roadmap_divs a {
         width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    /* Roadmaps */  
+
+    /* Roadmaps */
+
+    /* Footer: Contact section */
+    footer .container {
+        gap: 20px;
+    }
+
+    footer .container .contact_links {
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    footer .container .other_links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    footer .container .other_links .links {
+        width: 100%;
+    }
+
+    footer .container .other_links .links svg {
+        font-size: 20px;
+    }
+
+    footer .container .other_links .links span {
+        font-size: 14px;
+    }
+
+    /* Footer: Contact section */
 }
 
 /* Small devices */
-@media (min-width: 500px) and (max-width: 767px){
+@media (min-width: 500px) and (max-width: 767px) {
+
     /* Hello Message */
     .curve {
         background-color: var(--blue-);
         height: 250px;
     }
+
     .curve img {
         top: 248px;
     }
-    .hello_msg{
+
+    .hello_msg {
         margin: 0px auto;
         transform: translateY(-40px);
     }
-    .hello_msg h1{
+
+    .hello_msg h1 {
         font-size: 35px;
     }
-    .hello_msg span{
+
+    .hello_msg span {
         font-size: 45px;
     }
-    .hello_msg h2{
+
+    .hello_msg h2 {
         font-size: 25px;
     }
+
     /* Hello Message */
     /* Header */
-    header .container{
+    header .container {
         align-items: center;
     }
-    #list_button{
+
+    #list_button {
         display: unset;
     }
-    header ul{
+
+    header ul {
         display: none;
     }
-    #list{
+
+    #list {
         display: none;
         padding: 1px;
         position: absolute;
@@ -700,11 +873,13 @@ header ul li span{
         transition: 0.5s;
         transition-property: transform;
     }
+
     #list li {
         width: 100%;
         outline: 1px solid black;
         height: 100%;
     }
+
     #list a {
         width: 100%;
         height: 100%;
@@ -715,107 +890,147 @@ header ul li span{
         cursor: pointer;
         text-decoration: none;
     }
-    #list li img{
+
+    #list li img {
         width: 40px;
         height: 40px;
     }
-    #list li a span{
+
+    #list li a span {
         text-align: center;
         color: black;
         font-weight: bold;
     }
+
     /* Header */
     /* About Blog */
-    .about .container .service .service_div{
+    .about .container .service .service_div {
         width: 55%;
     }
-    .about .container .service .service_div svg{
+
+    .about .container .service .service_div svg {
         font-size: 30px;
     }
-    .about .container .text h1{
+
+    .about .container .text h1 {
         font-size: 45px;
     }
-    .about .container .service .service_div h2{
+
+    .about .container .service .service_div h2 {
         font-size: 17px;
     }
-    .about .container .service .service_div p{
+
+    .about .container .service .service_div p {
         font-size: 14px;
     }
+
     /* About Blog */
     /* Topics */
     .topics .title h1 {
         font-size: 30px;
     }
-    .topics .title::before, .topics .title::after{
+
+    .topics .title::before,
+    .topics .title::after {
         width: 36%;
     }
+
     .topics .topic_divs .topic {
         width: 220px;
     }
+
     .topics .topic_divs .topic h1 {
         font-size: 26px;
     }
+
     /* Topics */
     /* Roadmaps */
     .roadmaps .title h1 {
         font-size: 30px;
     }
-    .roadmaps .title::before, .roadmaps .title::after{
+
+    .roadmaps .title::before,
+    .roadmaps .title::after {
         width: 36%;
     }
+
     .roadmaps .roadmap_divs .roadmap {
         width: 220px;
     }
+
     .roadmaps .roadmap_divs .roadmap h1 {
         font-size: 26px;
     }
+
     .roadmaps .roadmap_divs .roadmap {
         width: 220px;
     }
+
     .roadmaps .roadmap_divs .roadmap h1 {
         font-size: 26px;
     }
+
     /* Roadmaps */
+
+    /* Footer: Contact section */
+    footer .container .other_links .links svg {
+        font-size: 22px;
+    }
+
+    footer .container .other_links .links span {
+        font-size: 14px;
+    }
+
+    /* Footer: Contact section */
 }
 
 /* Medium devices */
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 992px) {
+
     /* Header */
-    #list{
+    #list {
         display: none !important
     }
+
     /* Header */
     /* About Blog */
-    .about .container .service .service_div{
+    .about .container .service .service_div {
         width: calc(80% / 2);
     }
+
     /* About Blog */
     /* Topics */
     .topics .title h1 {
         font-size: 30px;
     }
+
     /* Topics */
     /* Roadmaps */
     .roadmaps .title h1 {
         font-size: 30px;
     }
+
     /* Roadmaps */
 }
 
 /* Large devices */
-@media (min-width: 993px) and (max-width: 1999px){ 
+@media (min-width: 993px) and (max-width: 1999px) {
+
     /* Header */
-    #list{
+    #list {
         display: none !important
     }
+
     /* Header */
 }
 
 /* X-Large devices */
 @media (min-width: 1200px) {
+
     /* Header */
-    #list{
+    #list {
         display: none !important
     }
+
     /* Header */
 }
