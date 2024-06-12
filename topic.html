@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Topic</title>
+    <style>
+        /* Message div */
+        .msg {
+            position: fixed;
+            z-index: 11;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(153, 152, 152, 0.712);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .msg .text {
+            width: fit-content;
+            height: 300px;
+            padding: 20px;
+            text-align: center;
+            background-color: #dadada;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            border-radius: 40px;
+            color: black;
+            font-size: 20px;
+            box-shadow: inset 0 0 3px 2px white;
+        }
+
+        /* Message div */
+        /* Header */
+
+        header {
+            width: 100%;
+            height: 100px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: var(--blue-);
+            z-index: 10;
+            background-color: rgb(0 153 255);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+
+        }
+
+        #list_button {
+            display: none;
+            cursor: pointer;
+            transition: 0.5s transform;
+        }
+
+        header img {
+            width: 64px;
+            height: 60px;
+        }
+
+        header .logo {
+            width: 20%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        header .logo h3 {
+            color: black;
+        }
+
+        header ul {
+            width: 70%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+            transition: 0.3s opacity;
+        }
+
+        header ul li {
+            width: calc((100% / 4) - 40px);
+            height: 100%;
+        }
+
+        header ul a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        header ul li span {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Header */
+        /* Extra samll devices */
+        @media (max-width: 499px) {
+
+
+            /* Message div */
+            .msg .text {
+                font-size: 15px;
+                height: 280px;
+            }
+
+            /* Message div */
+
+            /* Header */
+            header .container {
+                align-items: center;
+                padding-left: 30px;
+            }
+
+            #list_button {
+                display: unset;
+            }
+
+            header ul {
+                display: none;
+            }
+
+            #list {
+                display: none;
+                padding: 1px;
+                position: absolute;
+                background-color: rgb(72 179 251);
+                width: 100%;
+                left: 0;
+                top: -280px;
+                flex-direction: column;
+                height: 330px;
+                gap: 5px;
+                justify-content: flex-start;
+                align-items: start;
+                z-index: 1;
+                list-style: none;
+                transition: 0.5s;
+                transition-property: transform;
+            }
+
+            #list li {
+                width: 100%;
+                outline: 1px solid black;
+                height: 100%;
+            }
+
+            #list a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            #list li img {
+                width: 40px;
+                height: 40px;
+            }
+
+            #list li a span {
+                text-align: center;
+                color: black;
+                font-weight: bold;
+            }
+
+            /* Header */
+        }
+
+        /* Small devices */
+        @media (min-width: 500px) and (max-width: 767px) {
+
+            /* Header */
+            header .container {
+                align-items: center;
+            }
+
+            #list_button {
+                display: unset;
+            }
+
+            header ul {
+                display: none;
+            }
+
+            #list {
+                display: none;
+                padding: 1px;
+                position: absolute;
+                background-color: rgb(72 179 251);
+                width: 100%;
+                left: 0;
+                top: -280px;
+                flex-direction: column;
+                height: 380px;
+                gap: 5px;
+                justify-content: flex-start;
+                align-items: start;
+                z-index: 1;
+                list-style: none;
+                transition: 0.5s;
+                transition-property: transform;
+            }
+
+            #list li {
+                width: 100%;
+                outline: 1px solid black;
+                height: 100%;
+            }
+
+            #list a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            #list li img {
+                width: 40px;
+                height: 40px;
+            }
+
+            #list li a span {
+                text-align: center;
+                color: black;
+                font-weight: bold;
+            }
+
+            /* Header */
+        }
+
+        /* Meduim devices */
+        @media (min-width: 768px) and (max-width: 992px) {
+
+            /* Header */
+            #list {
+                display: none !important
+            }
+
+            /* Header */
+        }
+
+        /* Large devices */
+        @media (min-width: 993px) and (max-width: 1999px) {
+
+            /* Header */
+            #list {
+                display: none !important
+            }
+
+            /* Header */
+        }
+
+        /* X-Large devices */
+        @media (min-width: 1200px) {
+
+            /* Header */
+            #list {
+                display: none !important
+            }
+
+            /* Header */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Message div -->
+    <div class="msg" id="msg">
+        <div class="text">
+            <p>For sorry, this feature not finished yet.</p>
+            <p>I hope you enjoyed with other features &#128516;</p>
+        </div>
+    </div>
+    <!-- Message div -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./Images/icons8-technology-100.png" alt="No source">
+                <h3>Techno<span>X</span></h3>
+            </div>
+            <img src="./Images/icons8-list-100 (1).png" alt="No source" id="list_button" class="notClicked">
+            <ul>
+                <li>
+                    <a href="./aurthor.html">
+                        <img src="./Images/icons8-writer-64.png" alt="">
+                        <span>عن الكاتب</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="not_finished">
+                        <img src="./Images/icons8-sources-64.png" alt="">
+                        <span>المصادر</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="topicsSection">
+                        <img src="./Images/icons8-stack-exchange-100.png" alt="">
+                        <span>الموضوعات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://xxmgxxyt.github.io/Words_Game/">
+                        <img src="./Images/icons8-question-100.png" alt="">
+                        <span>لعبة الاسئلة</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <ul id="list">
+        <li>
+            <a href="./aurthor.html">
+                <img src="./Images/icons8-writer-64.png" alt="">
+                <span>عن الكاتب</span>
+            </a>
+        </li>
+        <li>
+            <a class="not_finished">
+                <img src="./Images/icons8-sources-64.png" alt="">
+                <span>المصادر</span>
+            </a>
+        </li>
+        <li>
+            <a class="topicsSection">
+                <img src="./Images/icons8-stack-exchange-100.png" alt="">
+                <span>الموضوعات</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://xxmgxxyt.github.io/Words_Game/">
+                <img src="./Images/icons8-question-100.png" alt="">
+                <span>لعبة الاسئلة</span>
+            </a>
+        </li>
+    </ul>
+    <!-- Header -->
+    <script>
+        // Get all not_finished features
+        let not_finished = document.querySelectorAll(".not_finished")
+        // Get the header list and the list button
+        let list = document.getElementById("list")
+        let listBut = document.getElementById("list_button")
+
+        // Message div
+        function showMsg() {
+            msg.style.display = "flex";
+            setTimeout(() => {
+                msg.style.opacity = 1;
+            }, 300)
+            setTimeout(() => {
+                msg.style.opacity = 0;
+            }, 4000)
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 4300)
+        }
+        not_finished.forEach((e) => {
+            e.addEventListener("click", () => showMsg())
+        })
+
+        // List
+        listBut.addEventListener("click", function () {
+            if (listBut.classList.contains("notClicked")) {
+                listBut.classList.remove("notClicked")
+                setTimeout(() => listBut.classList.add("clicked"), 100)
+                listBut.style.transform = "rotate(90deg)"
+                list.style.display = "flex"
+                setTimeout(() => list.style.transform = "translateY(380px)", 100)
+            }
+            if (listBut.classList.contains("clicked")) {
+                listBut.classList.remove("clicked")
+                setTimeout(() => listBut.classList.add("notClicked"), 100)
+                list.style.transform = "unset"
+                listBut.style.transform = "unset"
+                setTimeout(() => list.style.display = "flex", 500)
+            }
+        })
+
+        document.querySelector(".logo").onclick = () => {
+            window.open("./index.html", "_self")
+        }
+    </script>
+</body>
+
+</html>
