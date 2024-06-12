@@ -388,6 +388,10 @@ header ul li span {
     top: 40%;
 }
 
+.adv .topic_divs a {
+    color: black;
+}
+
 /* Topics */
 
 /* Roadmaps */
@@ -525,22 +529,18 @@ footer .container .contact_links a {
 }
 
 footer .container .contact_links a:nth-child(1):hover {
-    color: #17A9FD;
-}
-
-footer .container .contact_links a:nth-child(2):hover {
     color: #C13584;
 }
 
-footer .container .contact_links a:nth-child(3):hover {
+footer .container .contact_links a:nth-child(2):hover {
     color: blue;
 }
 
-footer .container .contact_links a:nth-child(4):hover {
+footer .container .contact_links a:nth-child(3):hover {
     color: #161312;
 }
 
-footer .container .contact_links a:nth-child(5):hover {
+footer .container .contact_links a:nth-child(4):hover {
     color: #000000;
 }
 
@@ -563,11 +563,7 @@ footer .container .other_links .links svg {
     font-size: 30px;
 }
 
-footer .container .other_links .links:nth-child(2) svg {
-    color: #09ff09;
-}
-
-footer .container .other_links .links:nth-child(1) svg {
+footer .container .other_links .links {
     color: gray;
 }
 
