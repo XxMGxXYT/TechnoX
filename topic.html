@@ -4,295 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Topic</title>
-    <style>
-        /* Message div */
-        .msg {
-            position: fixed;
-            z-index: 11;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(153, 152, 152, 0.712);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        .msg .text {
-            width: fit-content;
-            height: 300px;
-            padding: 20px;
-            text-align: center;
-            background-color: #dadada;
-            flex-direction: column;
-            justify-content: center;
-            display: flex;
-            border-radius: 40px;
-            color: black;
-            font-size: 20px;
-            box-shadow: inset 0 0 3px 2px white;
-        }
-
-        /* Message div */
-        /* Header */
-
-        header {
-            width: 100%;
-            height: 100px;
-            top: 0;
-            left: 0;
-            position: absolute;
-            background-color: var(--blue-);
-            z-index: 10;
-            background-color: rgb(0 153 255);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            height: 100%;
-
-        }
-
-        #list_button {
-            display: none;
-            cursor: pointer;
-            transition: 0.5s transform;
-        }
-
-        header img {
-            width: 64px;
-            height: 60px;
-        }
-
-        header .logo {
-            width: 20%;
-            height: 100px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        header .logo h3 {
-            color: black;
-        }
-
-        header ul {
-            width: 70%;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            list-style: none;
-            transition: 0.3s opacity;
-        }
-
-        header ul li {
-            width: calc((100% / 4) - 40px);
-            height: 100%;
-        }
-
-        header ul a {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        header ul li span {
-            text-align: center;
-            color: black;
-            font-weight: bold;
-        }
-
-        /* Header */
-        /* Extra samll devices */
-        @media (max-width: 499px) {
-
-
-            /* Message div */
-            .msg .text {
-                font-size: 15px;
-                height: 280px;
-            }
-
-            /* Message div */
-
-            /* Header */
-            header .container {
-                align-items: center;
-                padding-left: 30px;
-            }
-
-            #list_button {
-                display: unset;
-            }
-
-            header ul {
-                display: none;
-            }
-
-            #list {
-                display: none;
-                padding: 1px;
-                position: absolute;
-                background-color: rgb(72 179 251);
-                width: 100%;
-                left: 0;
-                top: -280px;
-                flex-direction: column;
-                height: 330px;
-                gap: 5px;
-                justify-content: flex-start;
-                align-items: start;
-                z-index: 1;
-                list-style: none;
-                transition: 0.5s;
-                transition-property: transform;
-            }
-
-            #list li {
-                width: 100%;
-                outline: 1px solid black;
-                height: 100%;
-            }
-
-            #list a {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                text-decoration: none;
-            }
-
-            #list li img {
-                width: 40px;
-                height: 40px;
-            }
-
-            #list li a span {
-                text-align: center;
-                color: black;
-                font-weight: bold;
-            }
-
-            /* Header */
-        }
-
-        /* Small devices */
-        @media (min-width: 500px) and (max-width: 767px) {
-
-            /* Header */
-            header .container {
-                align-items: center;
-            }
-
-            #list_button {
-                display: unset;
-            }
-
-            header ul {
-                display: none;
-            }
-
-            #list {
-                display: none;
-                padding: 1px;
-                position: absolute;
-                background-color: rgb(72 179 251);
-                width: 100%;
-                left: 0;
-                top: -280px;
-                flex-direction: column;
-                height: 380px;
-                gap: 5px;
-                justify-content: flex-start;
-                align-items: start;
-                z-index: 1;
-                list-style: none;
-                transition: 0.5s;
-                transition-property: transform;
-            }
-
-            #list li {
-                width: 100%;
-                outline: 1px solid black;
-                height: 100%;
-            }
-
-            #list a {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                text-decoration: none;
-            }
-
-            #list li img {
-                width: 40px;
-                height: 40px;
-            }
-
-            #list li a span {
-                text-align: center;
-                color: black;
-                font-weight: bold;
-            }
-
-            /* Header */
-        }
-
-        /* Meduim devices */
-        @media (min-width: 768px) and (max-width: 992px) {
-
-            /* Header */
-            #list {
-                display: none !important
-            }
-
-            /* Header */
-        }
-
-        /* Large devices */
-        @media (min-width: 993px) and (max-width: 1999px) {
-
-            /* Header */
-            #list {
-                display: none !important
-            }
-
-            /* Header */
-        }
-
-        /* X-Large devices */
-        @media (min-width: 1200px) {
-
-            /* Header */
-            #list {
-                display: none !important
-            }
-
-            /* Header */
-        }
-    </style>
 </head>
 
 <body>
@@ -309,7 +24,7 @@
         <div class="container">
             <div class="logo">
                 <img src="./Images/icons8-technology-100.png" alt="No source">
-                <h3>Techno<span>X</span></h3>
+                <h4>Techno<span>X</span></h4>
             </div>
             <img src="./Images/icons8-list-100 (1).png" alt="No source" id="list_button" class="notClicked">
             <ul>
@@ -367,6 +82,175 @@
         </li>
     </ul>
     <!-- Header -->
+    <!-- Section one -->
+    <div class="sec1">
+        <div class="container">
+            <img src="./Images/2150061955.jpg" alt="No source">
+            <ul>
+                <a href="#">
+                    <li>عنوان</li>
+                </a>
+                <a href="#">
+                    <li>عنوان</li>
+                </a>
+                <a href="#">
+                    <li>عنوان</li>
+                </a>
+                <a href="#">
+                    <li>عنوان</li>
+                </a>
+                <a href="#">
+                    <li>عنوان</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <!-- Section one -->
+    <!-- Section two -->
+    <div class="all">
+        <div class="blog">
+            <div class="sec2">
+                <h1>عنوان</h1>
+                <p>
+                    تم وضع الأسس التي تقوم عليها ميكانيكا الكم الحديثة في منتصف القرن العشرين من قبل مجموعة من العلماء
+                    منهم
+                    ألبرت آينشتاين وماكس بلانك ونيلز بور وماكي بورن، وأصبحت الصيغة الأساسية للفيزياء الذرية الجديدة قيد
+                    الاستخدام، حيث أصبح يُطلق على الجسيمات الضوئية اسم الفوتونات، وفي عام 1930م تم الإعلان رسميًا عن
+                    نظرية
+                    ميكانيكا الكم بتعاون من عدد من العلماء منهم ديفيد هيلبرت وبول ديراك وجون فون نيومان، والتي ساعدت على
+                    ظهور
+                    مجالات أخرى مثل كيمياء الكم وإلكترونيات الكم، وتضاربت مع التطورات الحديثة للنظريات مثل نظرية الأوتار
+                    ونظريات
+                    جاذبية الكم، وقد قدمت نظرية ميكانيكا الكم تفسيرًا للعديد من مميزات الجدول الدوري للعناصر الكيميائية
+                    ووصف
+                    سلوك الذرات عند حدوث التفاعل الكيميائي وتكوين الروابط وكيفية تدفق الإلكترونات في أشباه الموصلات
+                    المستخدمة في
+                    الرقاقات الحاسوبية التي تعتبر من التقنيات الحديثة، وفيما يأتي الإجابة عن سؤال ما هي نظرية ميكانيكا
+                    الكم
+                </p>
+                <div class="photo"><img src="./Images/2150061955.jpg" alt="No source"></div>
+                <p>
+                    تم وضع الأسس التي تقوم عليها ميكانيكا الكم الحديثة في منتصف القرن العشرين من قبل مجموعة من العلماء
+                    منهم
+                    ألبرت آينشتاين وماكس بلانك ونيلز بور وماكي بورن، وأصبحت الصيغة الأساسية للفيزياء الذرية الجديدة قيد
+                    الاستخدام، حيث أصبح يُطلق على الجسيمات الضوئية اسم الفوتونات، وفي عام 1930م تم الإعلان رسميًا عن
+                    نظرية
+                    ميكانيكا الكم بتعاون من عدد من العلماء منهم ديفيد هيلبرت وبول ديراك وجون فون نيومان، والتي ساعدت على
+                    ظهور
+                    مجالات أخرى مثل كيمياء الكم وإلكترونيات الكم، وتضاربت مع التطورات الحديثة للنظريات مثل نظرية الأوتار
+                    ونظريات
+                    جاذبية الكم، وقد قدمت نظرية ميكانيكا الكم تفسيرًا للعديد من مميزات الجدول الدوري للعناصر الكيميائية
+                    ووصف
+                    سلوك الذرات عند حدوث التفاعل الكيميائي وتكوين الروابط وكيفية تدفق الإلكترونات في أشباه الموصلات
+                    المستخدمة في
+                    الرقاقات الحاسوبية التي تعتبر من التقنيات الحديثة، وفيما يأتي الإجابة عن سؤال ما هي نظرية ميكانيكا
+                    الكم
+                </p>
+            </div>
+            <div class="sec2">
+                <h1>عنوان</h1>
+                <p>
+                    تم وضع الأسس التي تقوم عليها ميكانيكا الكم الحديثة في منتصف القرن العشرين من قبل مجموعة من العلماء
+                    منهم
+                    ألبرت آينشتاين وماكس بلانك ونيلز بور وماكي بورن، وأصبحت الصيغة الأساسية للفيزياء الذرية الجديدة قيد
+                    الاستخدام، حيث أصبح يُطلق على الجسيمات الضوئية اسم الفوتونات، وفي عام 1930م تم الإعلان رسميًا عن
+                    نظرية
+                    ميكانيكا الكم بتعاون من عدد من العلماء منهم ديفيد هيلبرت وبول ديراك وجون فون نيومان، والتي ساعدت على
+                    ظهور
+                    مجالات أخرى مثل كيمياء الكم وإلكترونيات الكم، وتضاربت مع التطورات الحديثة للنظريات مثل نظرية الأوتار
+                    ونظريات
+                    جاذبية الكم، وقد قدمت نظرية ميكانيكا الكم تفسيرًا للعديد من مميزات الجدول الدوري للعناصر الكيميائية
+                    ووصف
+                    سلوك الذرات عند حدوث التفاعل الكيميائي وتكوين الروابط وكيفية تدفق الإلكترونات في أشباه الموصلات
+                    المستخدمة في
+                    الرقاقات الحاسوبية التي تعتبر من التقنيات الحديثة، وفيما يأتي الإجابة عن سؤال ما هي نظرية ميكانيكا
+                    الكم
+                </p>
+                <p>
+                    تم وضع الأسس التي تقوم عليها ميكانيكا الكم الحديثة في منتصف القرن العشرين من قبل مجموعة من العلماء
+                    منهم
+                    ألبرت آينشتاين وماكس بلانك ونيلز بور وماكي بورن، وأصبحت الصيغة الأساسية للفيزياء الذرية الجديدة قيد
+                    الاستخدام، حيث أصبح يُطلق على الجسيمات الضوئية اسم الفوتونات، وفي عام 1930م تم الإعلان رسميًا عن
+                    نظرية
+                    ميكانيكا الكم بتعاون من عدد من العلماء منهم ديفيد هيلبرت وبول ديراك وجون فون نيومان، والتي ساعدت على
+                    ظهور
+                    مجالات أخرى مثل كيمياء الكم وإلكترونيات الكم، وتضاربت مع التطورات الحديثة للنظريات مثل نظرية الأوتار
+                    ونظريات
+                    جاذبية الكم، وقد قدمت نظرية ميكانيكا الكم تفسيرًا للعديد من مميزات الجدول الدوري للعناصر الكيميائية
+                    ووصف
+                    سلوك الذرات عند حدوث التفاعل الكيميائي وتكوين الروابط وكيفية تدفق الإلكترونات في أشباه الموصلات
+                    المستخدمة في
+                    الرقاقات الحاسوبية التي تعتبر من التقنيات الحديثة، وفيما يأتي الإجابة عن سؤال ما هي نظرية ميكانيكا
+                    الكم
+                </p>
+            </div>
+            <div class="sec2">
+                <h1>عنوان</h1>
+                <p>
+                    تم وضع الأسس التي تقوم عليها ميكانيكا الكم الحديثة في منتصف القرن العشرين من قبل مجموعة من العلماء
+                    منهم
+                    ألبرت آينشتاين وماكس بلانك ونيلز بور وماكي بورن، وأصبحت الصيغة الأساسية للفيزياء الذرية الجديدة قيد
+                    الاستخدام، حيث أصبح يُطلق على الجسيمات الضوئية اسم الفوتونات، وفي عام 1930م تم الإعلان رسميًا عن
+                    نظرية
+                    ميكانيكا الكم بتعاون من عدد من العلماء منهم ديفيد هيلبرت وبول ديراك وجون فون نيومان، والتي ساعدت على
+                    ظهور
+                    مجالات أخرى مثل كيمياء الكم وإلكترونيات الكم، وتضاربت مع التطورات الحديثة للنظريات مثل نظرية الأوتار
+                    ونظريات
+                    جاذبية الكم، وقد قدمت نظرية ميكانيكا الكم تفسيرًا للعديد من مميزات الجدول الدوري للعناصر الكيميائية
+                    ووصف
+                    سلوك الذرات عند حدوث التفاعل الكيميائي وتكوين الروابط وكيفية تدفق الإلكترونات في أشباه الموصلات
+                    المستخدمة في
+                    الرقاقات الحاسوبية التي تعتبر من التقنيات الحديثة، وفيما يأتي الإجابة عن سؤال ما هي نظرية ميكانيكا
+                    الكم
+                </p>
+                <div class="photo"><img src="./Images/2150061955.jpg" alt="No source"></div>
+                <p>
+                    تم وضع الأسس التي تقوم عليها ميكانيكا الكم الحديثة في منتصف القرن العشرين من قبل مجموعة من العلماء
+                    منهم
+                    ألبرت آينشتاين وماكس بلانك ونيلز بور وماكي بورن، وأصبحت الصيغة الأساسية للفيزياء الذرية الجديدة قيد
+                    الاستخدام، حيث أصبح يُطلق على الجسيمات الضوئية اسم الفوتونات، وفي عام 1930م تم الإعلان رسميًا عن
+                    نظرية
+                    ميكانيكا الكم بتعاون من عدد من العلماء منهم ديفيد هيلبرت وبول ديراك وجون فون نيومان، والتي ساعدت على
+                    ظهور
+                    مجالات أخرى مثل كيمياء الكم وإلكترونيات الكم، وتضاربت مع التطورات الحديثة للنظريات مثل نظرية الأوتار
+                    ونظريات
+                    جاذبية الكم، وقد قدمت نظرية ميكانيكا الكم تفسيرًا للعديد من مميزات الجدول الدوري للعناصر الكيميائية
+                    ووصف
+                    سلوك الذرات عند حدوث التفاعل الكيميائي وتكوين الروابط وكيفية تدفق الإلكترونات في أشباه الموصلات
+                    المستخدمة في
+                    الرقاقات الحاسوبية التي تعتبر من التقنيات الحديثة، وفيما يأتي الإجابة عن سؤال ما هي نظرية ميكانيكا
+                    الكم
+                </p>
+            </div>
+        </div>
+        <div class="topical">
+            <div class="common_topic">
+                <img src="./Images/2149901789.jpg" alt="No source">
+                <h4>عنوان الصورة</h4>
+            </div>
+            <div class="common_topic">
+                <img src="./Images/2149901789.jpg" alt="No source">
+                <h4>عنوان الصورة</h4>
+            </div>
+            <div class="common_topic">
+                <img src="./Images/2149901789.jpg" alt="No source">
+                <h4>عنوان الصورة</h4>
+            </div>
+            <div class="common_topic">
+                <img src="./Images/2149901789.jpg" alt="No source">
+                <h4>عنوان الصورة</h4>
+            </div>
+            <div class="common_topic">
+                <img src="./Images/2149901789.jpg" alt="No source">
+                <h4>عنوان الصورة</h4>
+            </div>
+            <div class="common_topic">
+                <img src="./Images/2149901789.jpg" alt="No source">
+                <h4>عنوان الصورة</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Section two -->
     <script>
         // Get all not_finished features
         let not_finished = document.querySelectorAll(".not_finished")
@@ -398,7 +282,7 @@
                 setTimeout(() => listBut.classList.add("clicked"), 100)
                 listBut.style.transform = "rotate(90deg)"
                 list.style.display = "flex"
-                setTimeout(() => list.style.transform = "translateY(380px)", 100)
+                setTimeout(() => list.style.transform = "translateY(390px)", 100)
             }
             if (listBut.classList.contains("clicked")) {
                 listBut.classList.remove("clicked")
@@ -413,6 +297,7 @@
             window.open("./index.html", "_self")
         }
     </script>
+    <script src="./topics.js"></script>
 </body>
 
 </html>

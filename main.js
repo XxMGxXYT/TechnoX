@@ -52,7 +52,7 @@ listBut.addEventListener("click", function () {
         setTimeout(() => listBut.classList.add("clicked"), 100)
         listBut.style.transform = "rotate(90deg)"
         list.style.display = "flex"
-        setTimeout(() => list.style.transform = "translateY(380px)", 100)
+        setTimeout(() => list.style.transform = "translateY(390px)", 100)
     }
     if (listBut.classList.contains("clicked")) {
         listBut.classList.remove("clicked")

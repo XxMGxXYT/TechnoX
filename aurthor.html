@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عن الكاتب</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
         }
-        body{
+
+        body {
             background-image: url(./Images/5590457.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
         }
-        .aurthor{
+
+        .aurthor {
             width: 100%;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .aurthor .container{
+
+        .aurthor .container {
             width: 600px;
-            height: 530px;
+            height: 500px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,7 +42,8 @@
             border-radius: 10px;
             box-shadow: 0 0 0 0 rgb(167, 167, 167);
         }
-        .aurthor .container .curve{
+
+        .aurthor .container .curve {
             position: relative;
             width: 100%;
             height: 200px;
@@ -46,7 +51,8 @@
             border-bottom-left-radius: 50%;
             background-color: rgb(0 153 255);
         }
-        .aurthor .container .curve .photo{
+
+        .aurthor .container .curve .photo {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -58,11 +64,13 @@
             border-radius: 50%;
             background-color: white;
         }
-        .aurthor .container .curve .photo img{
+
+        .aurthor .container .curve .photo img {
             width: 100px;
             height: 100px;
         }
-        .aurthor .container .text{
+
+        .aurthor .container .text {
             width: 100%;
             height: 50%;
             display: flex;
@@ -75,53 +83,66 @@
             padding-left: 30px;
             gap: 5px;
         }
-        .aurthor .container .text p{
+
+        .aurthor .container .text p {
             text-align: center;
             font-size: 20px;
         }
+
         /* Extra Small devices */
-        @media (max-width: 499px){
-            .aurthor .container{
+        @media (max-width: 499px) {
+            .aurthor .container {
                 width: 90%;
                 height: 470px;
+                justify-content: space-around;
             }
-            .aurthor .container .curve{
-                height: 140px;
+
+            .aurthor .container .curve {
+                height: 130px;
+                top: -22px;
             }
+
             .aurthor .container .curve .photo {
                 left: 35%;
                 bottom: -65px;
                 width: 110px;
                 height: 110px;
             }
+
             .aurthor .container .curve .photo img {
                 width: 80px;
                 height: 80px;
             }
-            .aurthor .container .text{
+
+            .aurthor .container .text {
                 padding-top: unset;
-                padding-right: 20px;
-                padding-left: 20px;
-                padding-bottom: 10px;
+                padding-right: 10px;
+                padding-left: 10px;
+                padding-bottom: unset;
             }
-            .aurthor .container .text p{
+
+            .aurthor .container .text p {
                 font-size: 17px;
                 font-weight: 600;
             }
         }
+
         /* Extra Small devices */
         /* Small devices */
-        @media (min-width: 500px) and (max-width: 767px){
-            .aurthor .container{
-                width: 80%;
+        @media (min-width: 500px) and (max-width: 767px) {
+            .aurthor .container {
+                width: 490px;
             }
+
             .aurthor .container .curve .photo {
                 left: 37%;
             }
         }
+
         /* Small devices */
     </style>
 </head>
+
 <body>
     <div class="aurthor">
         <div class="container">
@@ -137,10 +158,12 @@
                     <br>
                     أعمل ك مبرمج واجهة امامية للمواقع، و أمتلك سنين من الخبرة في مجال التقنيات و علوم الحاسب
                     <br>
-                    هدف مدونتي هو نشر و مشاركة ما أتلعمه او ما قد درسته، ب اسلوب مبسط و ممتع لنشر الفائدة و مساعدة المبرمجين و المهتمين بمجال البرمحة او التقنيات
+                    هدف مدونتي هو نشر و مشاركة ما أتلعمه او ما قد درسته، ب اسلوب مبسط و ممتع لنشر الفائدة و مساعدة
+                    المبرمجين و المهتمين بمجال البرمحة او التقنيات
                 </p>
             </div>
         </div>
     </div>
 </body>
+
 </html>
